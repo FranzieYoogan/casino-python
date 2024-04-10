@@ -8,6 +8,8 @@ app = Flask(__name__)
 @app.route("/", methods = ['POST','GET'])
 def index():
    if(flask.request.method == "POST"):
+    show = 0;
+    showError = 0
     userEmail = request.form['email'];
     userPassword = request.form['password'];
         
@@ -15,10 +17,15 @@ def index():
       show = 1;
 
     
-      return render_template('index.htm',show = show); 
+    return render_template('index.htm',show = show); 
+
    else:
+    showError = 1
+    show = 0
+    return render_template('index.htm',showError = showError)
+ 
     
-      return render_template('index.htm');
+     
       
 
 
