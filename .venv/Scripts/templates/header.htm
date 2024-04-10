@@ -37,22 +37,24 @@
                   document.getElementById('bubbleStyle').style.transition = '1s'
                   document.getElementById('bubbleStyle').style.opacity = '1'
                   document.getElementById('bubbleStyle').style.left = '2.2em'
-                  document.getElementById('navbarIcon').style.rotate = '20deg'
-                  document.getElementById('navbarIcon').style.transition = '1s'
+                  document.getElementById('navbarIcon').style.rotate = '40deg'
+                  document.getElementById('navbarIcon').style.transition = '0.5s'
 
                   setTimeout(() => {
                     document.getElementById('navbarIcon').style.rotate = '0deg'
-                  }, 300);
+                  }, 200);
 
                 }
 
                 function iconEventOut() {
      
                   document.getElementById('navbarIcon').style.transition = '0.5s'
-
+                  document.getElementById('navbarIcon').style.rotate = '40deg'
                   setTimeout(() => {
-                    document.getElementById('navbarIcon').style.rotate = '-20deg'
-                  }, 350);
+                    document.getElementById('navbarIcon').style.rotate = '0deg'
+                  }, 250);
+
+            
 
                 }
 
