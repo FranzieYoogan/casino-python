@@ -1,0 +1,98 @@
+.containerContent {
+
+
+    display: flex;
+    justify-content: center;
+
+}
+
+input {
+
+    border: 1px solid white !important;
+    background-color: transparent !important;
+    outline: -1px -1px 2px 2px white !important;
+    border-radius: 7px;
+    width: 100%;
+    height: 39px;
+    color: gray;
+}
+
+
+.inputStyle:hover {
+    transition: 1s !important;
+
+}
+
+
+
+
+
+button {
+
+    border: 1px solid white !important;
+    background-color: transparent !important;
+    box-shadow: 2px 2px 2px 2px transparent !important;
+}
+
+button:hover {
+
+    box-shadow: 0px 0px 4px 4px gray !important;
+
+}
+
+body {
+
+    background: url('/static/img/cards.gif');
+    background-size: 100% !important;
+
+}
+
+@media only screen and (width: 400px) {
+    body {
+      background-size: 150% !important;
+    }
+  }
+
+.emailLabel {
+
+    position: absolute;
+    bottom: 0.5em;
+    left: 1em;
+    cursor: text;
+    color: gray;
+
+}
+
+.passwordLabel {
+
+    position: absolute;
+    bottom: 0.5em;
+    left: 1em;
+    cursor: text;
+    color: gray;
+}
+
+.cupheadImg {
+
+    width: 40px;
+    position: absolute;
+    left: 0;
+    visibility: hidden;
+    transition: 1s;
+}
+
+.forgotStyle {
+
+    color: gray;
+    transition: 1s;
+    border-bottom: 1px solid gray;
+    text-decoration: none;
+}
+
+.forgotStyle:hover {
+
+    color: white;
+    border-bottom: 1px solid transparent;
+
+}
+
