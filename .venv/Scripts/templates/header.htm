@@ -19,7 +19,8 @@
 
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#"><img class="navbarIcon" src="/static/img/kingDiceIcon.jpeg" alt=""></a>
+          <a onmouseover="iconEvent()" onmouseout="iconEventOut()" class="navbar-brand" href="/"><img id="navbarIcon" class="navbarIcon" src="/static/img/kingDiceIcon.jpeg" alt=""> 
+            <img id="bubbleStyle" class="bubbleStyle" src="/static/img/bubble.png" alt=""></a>
           <button onclick="navbarEvent()"  class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -28,6 +29,42 @@
               <li class="nav-item">
                 <a class="loginLink nav-link active" aria-current="page" href="/">Login</a>
               </li>
+
+              <script>
+
+                function iconEvent() {
+
+                  document.getElementById('bubbleStyle').style.transition = '1s'
+                  document.getElementById('bubbleStyle').style.opacity = '1'
+                  document.getElementById('bubbleStyle').style.left = '2.2em'
+                  document.getElementById('navbarIcon').style.rotate = '20deg'
+                  document.getElementById('navbarIcon').style.transition = '1s'
+
+                  setTimeout(() => {
+                    document.getElementById('navbarIcon').style.rotate = '0deg'
+                  }, 300);
+
+                }
+
+                function iconEventOut() {
+     
+                  document.getElementById('navbarIcon').style.transition = '0.5s'
+
+                  setTimeout(() => {
+                    document.getElementById('navbarIcon').style.rotate = '-20deg'
+                  }, 350);
+
+                }
+
+                function iconEventOut() {
+                  document.getElementById('bubbleStyle').style.transition = '1s'
+                  document.getElementById('bubbleStyle').style.opacity = '0'
+                  document.getElementById('bubbleStyle').style.left = '1em'
+
+
+                }
+
+              </script>
 
               {% if show == 1 %}
                 
