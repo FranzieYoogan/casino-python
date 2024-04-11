@@ -45,7 +45,7 @@ rel="stylesheet"
 
 
 
-    <form method="POST" class="formStyle">
+    <form method="POST" class="formStyle" action="/">
         <!-- Email input -->
         <div data-mdb-input-init class="form-outline mb-4">
             <img class="cupheadImg" id="cupheadEmail" src="/static/img/cuphead.gif" alt="">
@@ -63,7 +63,7 @@ rel="stylesheet"
       
       
         <!-- Submit button -->
-        <button data-mdb-ripple-init type="submit" class="btn btn-primary btn-block mb-4">Sign in</button>
+        <button data-mdb-ripple-init type="submit" name="submit" id="submit" class="btn btn-primary btn-block mb-4">Sign in</button>
 
           <!-- 2 column grid layout for inline styling -->
           <div class="row mb-4">
@@ -159,17 +159,22 @@ if(document.getElementById('cupheadPassword').style.left = '0em') {
 
         </script>
 
-          {% if show == 1 %}
+          {% if login  %}
 
           <h1>DALE COMPA</h1>
             
           {% endif %}
 
-          {% if show == 0 %}
+          {% if not login  and loginError == 1%}
 
           <h1>SHEEESH</h1>
-
+            
           {% endif %}
+
+
+        
+
+        
       
       </form>
 

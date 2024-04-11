@@ -13,7 +13,7 @@
         <link rel="stylesheet" href="static/css/header.css">
         
     {% endblock %}
-
+    
 </head>
 <body>
 
@@ -26,9 +26,15 @@
           </button>
           <div class="positioning collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
+
+              {% if not login  %}
+                
+              
               <li class="nav-item">
                 <a class="loginLink nav-link active" aria-current="page" href="/">Login</a>
               </li>
+
+              {% endif %}
 
               <script>
 
@@ -68,7 +74,7 @@
 
               </script>
 
-              {% if show == 1 %}
+            {% if login %}
                 
      
               <li class="nav-item">
