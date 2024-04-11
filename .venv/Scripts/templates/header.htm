@@ -19,7 +19,18 @@
 
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
+          {% if not session["userEmail"] %}
+
           <a onmouseover="iconEvent()" onmouseout="iconEventOut()" class="navbar-brand" href="/"><img id="navbarIcon" class="navbarIcon" src="/static/img/kingDiceIcon.jpeg" alt=""> 
+            
+          {% else %}
+
+          <a onmouseover="iconEvent()" onmouseout="iconEventOut()" class="navbar-brand" href="/profile"><img id="navbarIcon" class="navbarIcon" src="/static/img/kingDiceIcon.jpeg" alt=""> 
+
+          {% endif %}
+          
+           
+           
             <img id="bubbleStyle" class="bubbleStyle" src="/static/img/bubble.png" alt=""></a>
           <button onclick="navbarEvent()"  class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -27,7 +38,7 @@
           <div class="positioning collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
 
-              {% if not login  %}
+              {% if not session["userEmail"]  %}
                 
               
               <li class="nav-item">
@@ -74,14 +85,19 @@
 
               </script>
 
-            {% if login %}
+            {% if session["userEmail"] %}
                 
      
               <li class="nav-item">
                 <a class="nav-link" href="#">Dice</a>
               </li>
+
               <li class="nav-item">
                 <a class="nav-link" href="#">Cards</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="/logout">Log Out</a>
               </li>
               {% endif %}
             </ul>
